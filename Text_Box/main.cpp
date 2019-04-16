@@ -1,5 +1,5 @@
 #include "textbox.h"
-
+#include "checklist.h"
 
 int main(int argc, char const *argv[])
 {
@@ -7,8 +7,9 @@ int main(int argc, char const *argv[])
     DWORD fdwMode = ENABLE_EXTENDED_FLAGS | ENABLE_WINDOW_INPUT | ENABLE_MOUSE_INPUT;
     SetConsoleMode(GetStdHandle(STD_INPUT_HANDLE),fdwMode);
     TextBox tb(12, 3, 3, "Text");
+    Checklist bl(10,10,"Hello");
     tb.draw();
-    
+    bl.draw();
     while (1)
     {
         INPUT_RECORD ir;
