@@ -1,13 +1,13 @@
-#include "checkbox.h"
+#include "checklist.h"
 #include <iostream>
 #include <algorithm>
 
-checkbox::checkbox(short x, short y, std::string value)
+checklist::checklist(short x, short y, std::string value)
     : X(x), Y(y), value(value), isChecked(false),
       color(FOREGROUND_BLUE | FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_INTENSITY),
       background(0) {}
 
-void checkbox::toggle()
+void checklist::toggle()
 {
   isChecked = !isChecked;
   draw();
@@ -21,7 +21,7 @@ COORD getCursorPosition()
   return info.dwCursorPosition;
 }
 
-void checkbox::draw()
+void checklist::draw()
 {
   COORD originalCursorPos = getCursorPosition();
   COORD coord = {X, Y};

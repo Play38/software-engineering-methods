@@ -1,7 +1,7 @@
 #include <string>
 #include <windows.h>
 
-class checkbox
+class checklist
 {
 public:
   const short X;
@@ -11,7 +11,7 @@ public:
   bool isChecked;
   std::string value;
 
-  checkbox(short X, short Y, std::string value);
+  checklist(short X, short Y, std::string value);
   void toggle();
   void draw();
 };
