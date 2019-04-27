@@ -4,7 +4,7 @@ else
 	CXX = /usr/bin/i686-w64-mingw32-g++
 endif
 
-OBJS = checkbox.o main.o
+OBJS = textbox.o main.o
 
 all: $(OBJS)
 	$(CXX) $(OBJS) -o main.exe -static
