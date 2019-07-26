@@ -16,4 +16,4 @@ class Label : public Control
     void keyDown(int, char)             {};
     void mousePressed(int, int, DWORD)  {};
     void draw(Graphics, int, int, size_t);
-}
+};
