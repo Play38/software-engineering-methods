@@ -1,5 +1,5 @@
-#include "EventEngine.h"
 #include <vector>
+#include "EventEngine.h"
 #include <algorithm>
 using namespace std;
 
@@ -21,7 +21,7 @@ void EventEngine::run(Control &c)
 			for (size_t z = 0; z < 5; ++z)
 			{
 				c.draw(_graphics, 0, 0, z);
-			}	
+			}
 			redraw = false;
 		}
 
@@ -37,15 +37,15 @@ void EventEngine::run(Control &c)
 			{
 				auto code = record.Event.KeyEvent.wVirtualKeyCode;
 				auto chr = record.Event.KeyEvent.uChar.AsciiChar;
-				if (code == VK_TAB)
+				if (code == VK_TAB)	
 					moveFocus(c, f);
 				else
-					f->keyDown(code, chr);
+					f->keyDown(code, chr);	
 				redraw = true;
 			}
 			break;
 		}
-		case MOUSE_EVENT:
+		case MOUSE_EVENT:	
 		{
 			auto button = record.Event.MouseEvent.dwButtonState;
 			auto coord = record.Event.MouseEvent.dwMousePosition;
