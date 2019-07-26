@@ -1,22 +1,17 @@
 #include "Label.h"
-#include <iostream>
 
-Label::Label(string value) : Control(), value(value) {};
-
-string Label::getValue()
-{
-    return this->value;
+Label::Label(int width) {
+    this->width = width;
+    this->height = 1;
+    this->showed = true;
 }
 
-void Label::setValue(string value)
-{
-    this->value = value;
-}
-
-
-void Label::draw(Graphics& g, int x, int y, size_t z)
-{
-    if (!z)
-        g.write(value);
-
+void Label::draw(Graphics g, int x, int y, size_t z) {
+	//draw label as requested
+    graphics.setBackground(this->background);
+	graphics.setForeground(this->foreground);
+	graphics.write(x, y, this->GetValue());
+    //set default values
+	graphics.setForeground(Color::White);
+	graphics.setBackground(Color::Black);
 }
