@@ -1,0 +1,62 @@
+#include "checkBox.h"
+
+CheckBox::CheckBox(short x, short y, string str) 
+	: Control(1, x, y, { 2,2 }) , cbValue(str) {}
+
+void CheckBox::setIsChecked(bool check) {
+	this->IsChecked = check;
+}
+
+bool CheckBox::getIsChecked() {
+	return this->IsChecked;
+}
+
+void CheckBox::setCbValue(string s) {
+	this->cbValue = s;
+}
+
+string CheckBox::getCbValue() {
+	return this->cbValue;
+}
+
+void CheckBox::draw(Graphics& g, int x, int y, size_t z) 
+{
+	g.setBackground(this->background);
+	g.setForeground(this->foreground);
+	bs->drawBorderType(x, y, cord ,g);
+	g.write(x + cord.X + 1, y + 1, cbValue);
+
+	if (IsChecked)
+		g.write(x + 1, y + 1, "X");
+}
+
+bool CheckBox::canGetFocus() { return true; }
+
+void CheckBox::mousePressed(int x, int y, bool isLeft, Graphics &g)
+{
+	if (y >= this->top && y <= this->top + this->cord.Y)
+	{
+		if (x >= this->left && x <= this->left + this->cord.X + 1)
+		{
+			if (this->IsChecked)
+				this->IsChecked = false;			
+			else
+				this->IsChecked = true;
+		}
+	}
+}
+
+void CheckBox::keyDown(int keyCode, char character, Graphics &g)
+{
+	COORD c = g.getCursorPos();
+		if (keyCode == 32 || keyCode == 13)
+		{
+			if (IsChecked)
+				IsChecked = false;
+			else
+				IsChecked = true;
+		}
+
+}
+
+

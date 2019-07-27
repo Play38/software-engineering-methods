@@ -1,0 +1,44 @@
+#ifndef PANEL_H
+#define PANEL_H
+
+#include "control.h"
+#include "radioBox.h"
+#include "checkList.h"
+#include <string>
+
+using namespace std;
+
+class Panel : public Control
+{
+private:
+	vector<Control*> items;
+	int currentFocus;
+	Control* prevFocus;
+	bool isList(Control* control);
+
+public:
+	Panel(int borderType, short x, short y, COORD cord);
+	void setCurrentFocus(int);
+	Control* getCurrentFocus();
+	virtual void draw(Graphics& g, int x, int y, size_t z);
+	bool myPureFunction() { return true; };
+	virtual void Add(Control* control);
+
+	virtual void getAllControls(vector<Control*>* controls);
+
+	void mousePressed(int x, int y, bool isLeft, Graphics &g) ;
+	void keyDown(int keyCode, char character, Graphics& g) ;
+
+	virtual bool canGetFocus();
+
+	virtual Control* GetIndex(int i);
+
+	short getLeft();
+	short getTop();
+
+	bool setLocalFocus();
+	
+
+};
+
+#endif // !PANEL_H
