@@ -1,12 +1,12 @@
-#include "Common/graphics.h"
-#include "Common/eventEngine.h"
-#include "Common/panel.h"
-#include "Common/textBox.h"
-#include "Common/checkList.h"
-#include "Common/messageBox.h"
-#include "Common/comboBox.h"
-#include "Common/numericBox.h"
-#include "Common/radioBox.h"
+#include "../Common/graphics.h"
+#include "../Common/eventEngine.h"
+#include "../Common/panel.h"
+#include "../Common/textBox.h"
+#include "../Common/checkList.h"
+#include "../Common/messageBox.h"
+#include "../Common/comboBox.h"
+#include "../Common/numericBox.h"
+#include "../Common/radioBox.h"
 
 int main(int argc, char** argv)
 {
