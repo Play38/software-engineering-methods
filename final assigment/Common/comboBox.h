@@ -1,4 +1,4 @@
-#include "../Controls/label.h"
+#include "../Controls/Label.h"
 #include <Windows.h>
 #include <iostream>
 

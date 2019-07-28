@@ -1,4 +1,4 @@
-#include "label.h"
+#include "Label.h"
 #include <iostream>
 
 Label::Label(short x, short y, string value) 
