@@ -1,4 +1,4 @@
-#include "textBox.h"
+#include "TextBox.h"
 
 TextBox::TextBox(int bord,short x, short y, COORD cor) 
 	:Control(bord, x, y, cor) 
@@ -38,26 +38,26 @@ void TextBox::mousePressed(int x, int y, bool isLeft, Graphics &g)
 		
 }
 
-void TextBox::keyDown(int keycode, char character, Graphics& g)
+void TextBox::keyDown(int keyCode, char character, Graphics& g)
 {
 	COORD c = g.getCursorPos();
-	int startstring = this->left;
+	int startString = this->left;
 	if (g.isInside(c.X, c.Y, this->left, this->top, this->left + cord.X, this->top + cord.Y))
 	{
 		this->currentPosition = c;
-		switch (keycode)
+		switch (keyCode)
 		{
 			case 8:		// backspace
 				if (g.getCursorPos().X - 1 == this->left)
 					return;
-				text.erase(currentPosition.X - 2 - startstring,1);
+				text.erase(currentPosition.X - 2 - startString,1);
 				this->currentPosition = { (SHORT)(currentPosition.X - 1),(SHORT)currentPosition.Y };
 				break;
 
 			case 46:	// del key
 				if (g.getCursorPos().X - 1 == this->left)
 					return;
-				text.erase(currentPosition.X - 1 - startstring,1);
+				text.erase(currentPosition.X - 1 - startString,1);
 				this->currentPosition = { (SHORT)(currentPosition.X - 1),(SHORT)currentPosition.Y };
 				break;
 
@@ -72,22 +72,22 @@ void TextBox::keyDown(int keycode, char character, Graphics& g)
 			case 39:	// right arrow
 				if (currentPosition.X < left + cord.X - 1)
 				{
-					int s = startstring + text.size() - currentPosition.X;
+					int s = startString + text.size() - currentPosition.X;
 					if (s >= 0)
 					{
 						this->currentPosition = { (SHORT)currentPosition.X + 1, (SHORT)currentPosition.Y };
 					}
-				}	
+				}
 				break;
 
 			default:
-				int s = startstring + text.size();
+				int s = startString + text.size();
 				int end = left + cord.X -1;
 				if (s - end < 0)
 				{
 					g.write((int)c.X, (int)c.Y, string(1, character));
 					this->currentPosition = { (SHORT)(this->currentPosition.X + 1),(SHORT)this->currentPosition.Y };
-					this->text.insert(currentPosition.X - 2 - startstring, 1, character);					
+					this->text.insert(currentPosition.X - 2 - startString, 1, character);
 				}
 				break;
 				

@@ -1,8 +1,8 @@
 #include "stdafx.h"
 #include "CppUnitTest.h"
-#include "../Common/eventEngine.h"
-#include "../Common/graphics.h"
-#include "../Common/numericBox.h"
+#include "../Common/EventEngine.h"
+#include "../Common/Graphics.h"
+#include "../Common/NumericBox.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

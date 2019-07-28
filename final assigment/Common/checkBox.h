@@ -1,6 +1,6 @@
 #ifndef CHECK_BOX_H
 #define CHECK_BOX_H
-#include "control.h"
+#include "Control.h"
 #include <string>
 #include <Windows.h>
 #include <iostream>

@@ -1,4 +1,4 @@
-#include "checkList.h"
+#include "CheckList.h"
 
 CheckList::CheckList(int bord, short x, short y, COORD cor, vector<string> str)
 	:Control::Control(bord,x,y,cor) , currentIndex(0)

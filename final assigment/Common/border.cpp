@@ -1,4 +1,4 @@
-#include "border.h"
+#include "Border.h"
 
 void Border::drawSingleBorder(int x, int y, COORD cor)
 {

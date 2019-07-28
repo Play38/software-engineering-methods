@@ -1,4 +1,4 @@
-#include "comboBox.h"
+#include "ComboBox.h"
 
 ComboBox::ComboBox(int bord, short x, short y, COORD cor, vector<string> comboOptions) 
 	: Control::Control(bord,x,y,cor) , IsMenuOpenFlg(0), selectedIndex(0), keyPressIndex(0), intialComboBoxValue(""), Enablefocus(false)

@@ -1,9 +1,9 @@
 #ifndef PANEL_H
 #define PANEL_H
 
-#include "control.h"
-#include "radioBox.h"
-#include "checkList.h"
+#include "Control.h"
+#include "RadioBox.h"
+#include "CheckList.h"
 #include <string>
 
 using namespace std;

@@ -1,4 +1,4 @@
-#include "../Common/control.h"
+#include "../Common/Control.h"
 #include <string>
 
 

@@ -1,4 +1,4 @@
-#include "borderStrategy.h"
+#include "BorderStrategy.h"
 
 void NoBorder::drawBorderType(int x, int y, COORD cor, Graphics& g) {
 	this->x = x;

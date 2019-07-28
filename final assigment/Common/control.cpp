@@ -1,4 +1,4 @@
-#include "control.h"
+#include "Control.h"
 
 Control* Control::focusObj = NULL;
 

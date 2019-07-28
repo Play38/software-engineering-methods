@@ -1,7 +1,7 @@
 #ifndef RADIOBOX_H
 #define RADIOBOX_H
 
-#include "checkBox.h"
+#include "CheckBox.h"
 
 using namespace std;
 
@@ -13,7 +13,7 @@ private:
 	void HoverElement(Graphics &g, bool Up);
 
 public:
-	RadioBox(int bordertype, short left, short top, COORD cord, vector<string> str);
+	RadioBox(int borderType, short left, short top, COORD cord, vector<string> str);
 	bool addSelectedItem(string item);
 	bool removeSelectedItem(string item);
 	void draw(Graphics& g, int x, int y, size_t z);

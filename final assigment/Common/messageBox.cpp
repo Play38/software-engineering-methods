@@ -1,10 +1,10 @@
-#include "messageBox.h"
+#include "MessageBox.h"
 
 Message_Box::Message_Box(int bord, short x, short y, COORD cor, string str)
 	: Control(bord, x, y, cor), messageBoxValue(str), toDraw(true), btnPressedFlg(-1)
 {
 	messageBoxBtns.push_back(new Button(1, x + 1, y + cor.Y, { 8,2 }, "Cancel"));
-	messageBoxBtns.push_back(new Button(1, x + 11, y + cor.Y, { 8,2 }, "OK"));
+	messageBoxBtns.push_back(new Button(1, x + 11, y + cor.Y, { 6,2 }, "OK"));
 }
 
 int Message_Box::getBtnPressedFlg() {

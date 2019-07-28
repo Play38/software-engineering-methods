@@ -1,4 +1,4 @@
-#include "checkBox.h"
+#include "CheckBox.h"
 
 CheckBox::CheckBox(short x, short y, string str) 
 	: Control(1, x, y, { 2,2 }) , cbValue(str) {}

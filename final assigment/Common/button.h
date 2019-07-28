@@ -1,4 +1,4 @@
-#include "control.h"
+#include "Control.h"
 #include <string>
 #include <Windows.h>
 #include <iostream>

@@ -1,6 +1,6 @@
 #include <string>
 #include <Windows.h>
-#include "control.h"
+#include "Control.h"
 
 using namespace std;
 

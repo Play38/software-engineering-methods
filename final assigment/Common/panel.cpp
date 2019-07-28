@@ -1,4 +1,4 @@
-#include "panel.h"
+#include "Panel.h"
 
 Panel::Panel(int bord, short x, short y, COORD cor) 
 	: Control(bord,x,y,cor), currentFocus(0){}

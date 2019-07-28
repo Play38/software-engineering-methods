@@ -1,4 +1,4 @@
-#include "radioBox.h"
+#include "RadioBox.h"
 
 RadioBox::RadioBox(int bord, short x, short y, COORD cor, vector<string> str)
 	:Control::Control(bord, x, y, cor), currentIndex(0)

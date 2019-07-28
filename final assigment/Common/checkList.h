@@ -1,6 +1,6 @@
 #ifndef CHECKLIST_H
 #define CHECKLIST_H
-#include "checkBox.h"
+#include "CheckBox.h"
 
 
 class CheckList : public Control {

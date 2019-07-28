@@ -1,6 +1,6 @@
 #pragma once
-#include "graphics.h"
-#include "borderStrategy.h"
+#include "Graphics.h"
+#include "BorderStrategy.h"
 #include <vector>
 
 using namespace std;

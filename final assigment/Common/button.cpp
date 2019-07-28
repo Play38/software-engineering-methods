@@ -1,4 +1,4 @@
-#include "button.h"
+#include "Button.h"
 
 Button::Button(int bord, short x, short y, COORD cor, string str) 
 	: Control(bord,x,y,cor) , btnValue(str) {}
@@ -24,5 +24,8 @@ bool Button::canGetFocus() { return false; }
 void Button::mousePressed(int x, int y, bool isLeft, Graphics &g)
 {
 	if (x > left  && x < left + cord.X && y > top && y < top + cord.Y)
-	{}
+	{
+        btnValue = "clicked";
+        setColor(Color::White,Color::Black);
+	}
 }

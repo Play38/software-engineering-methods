@@ -1,4 +1,4 @@
-#include "button.h"
+#include "Button.h"
 
 class Message_Box : public Control {
 private:

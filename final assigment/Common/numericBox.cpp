@@ -1,4 +1,4 @@
-#include "numericBox.h"
+#include "NumericBox.h"
 
 NumericBox::NumericBox(int bord, short x, short y, COORD cor, int currVal)
 	: Control(bord,x,y,cor), currValue(currVal) , minValue(0), maxValue(50)

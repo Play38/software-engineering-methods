@@ -1,7 +1,7 @@
 #include <Windows.h>
 #include <iostream>
 
-#include "graphics.h"
+#include "Graphics.h"
 
 using namespace std;
 
