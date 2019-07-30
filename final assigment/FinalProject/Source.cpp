@@ -1,3 +1,4 @@
+#define _WIN32_WINNT 0x0500
 #include "../Common/Graphics.h"
 #include "../Common/EventEngine.h"
 #include "../Common/Panel.h"
@@ -10,7 +11,9 @@
 
 int main(int argc, char** argv)
 {
-    system("mode 103,32");
+    system("mode 101,31");
+    HWND consoleWindow = GetConsoleWindow();
+    SetWindowLong(consoleWindow, GWL_STYLE, GetWindowLong(consoleWindow, GWL_STYLE) & ~WS_MAXIMIZEBOX & ~WS_SIZEBOX);
 	EventEngine e;
 
 	Panel p(2, 0, 0, { 100,30 });
